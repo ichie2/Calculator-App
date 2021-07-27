@@ -18,13 +18,15 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(builder: () {
-      return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
-        theme: lightTheme,
-        home: Home(),
-      );
-    });
+    return ScreenUtilInit(
+        designSize: Size(375, 825),
+        builder: () {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: 'Volocac',
+            theme: lightTheme,
+            home: Home(),
+          );
+        });
   }
 }
