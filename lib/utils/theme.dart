@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-bool global = true;
+var global = true;
+
+// Color _primaryColor = Color(0xF4AB41);
 
 class CustomTheme {
   static ThemeData getTheme() {
@@ -21,6 +23,10 @@ class CustomTheme {
       brightness: Brightness.light,
       textTheme: _lightTextTheme,
       primaryColorBrightness: Brightness.light,
+      backgroundColor: Colors.white,
+      scaffoldBackgroundColor: Colors.white,
+      accentColor: Colors.grey,
+      primaryColor: Colors.blue,
     );
   }
 
@@ -31,6 +37,9 @@ class CustomTheme {
       brightness: Brightness.dark,
       textTheme: _darkTextTheme,
       primaryColorBrightness: Brightness.dark,
+      scaffoldBackgroundColor: Colors.black,
+      backgroundColor: Colors.grey,
+      primaryColor: Colors.blue,
     );
   }
 }
