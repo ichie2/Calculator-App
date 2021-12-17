@@ -37,7 +37,8 @@ class MyApp extends StatelessWidget {
             color: Colors.white,
             debugShowCheckedModeBanner: false,
             title: 'Calculator Pro',
-            theme: CustomTheme.getTheme(),
+            theme: CustomTheme.lightTheme(),
+            darkTheme: CustomTheme.darkTheme(),
             home: Home(),
           ),
         );

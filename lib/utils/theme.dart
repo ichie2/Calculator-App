@@ -1,22 +1,27 @@
 import 'package:flutter/material.dart';
-
-var global = true;
-
-// Color _primaryColor = Color(0xF4AB41);
+import 'package:flutter_screenutil/size_extension.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CustomTheme {
-  static ThemeData getTheme() {
-    if (global) {
-      return _lightTheme();
-    } else {
-      return _darkTheme();
-    }
-  }
+  final _primaryColor = Color(0xfff4ab41);
 
-  static TextTheme _lightTextTheme = TextTheme();
+  //
+  static TextTheme _lightTextTheme = TextTheme(
+    headline1: GoogleFonts.mulish(
+      fontSize: 45.sp,
+      fontWeight: FontWeight.w400,
+      height: 2.sp,
+      color: Colors.black,
+    ),
+    headline2: GoogleFonts.mulish(
+      fontSize: 28.sp,
+      fontWeight: FontWeight.w200,
+      color: Colors.black54,
+    ),
+  );
   static TextTheme _darkTextTheme = TextTheme();
 
-  static ThemeData _lightTheme() {
+  static ThemeData lightTheme() {
     return ThemeData(
       platform: TargetPlatform.iOS,
       visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -30,7 +35,7 @@ class CustomTheme {
     );
   }
 
-  static ThemeData _darkTheme() {
+  static ThemeData darkTheme() {
     return ThemeData(
       platform: TargetPlatform.iOS,
       visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -38,7 +43,7 @@ class CustomTheme {
       textTheme: _darkTextTheme,
       primaryColorBrightness: Brightness.dark,
       scaffoldBackgroundColor: Colors.black,
-      backgroundColor: Colors.grey,
+      backgroundColor: Colors.black,
       primaryColor: Colors.blue,
     );
   }

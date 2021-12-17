@@ -1,3 +1,4 @@
+import 'package:calculator_app/widgets/switch_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/size_extension.dart';
 
@@ -13,18 +14,43 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     var theme = Theme.of(context);
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: theme.backgroundColor,
-      ),
       backgroundColor: theme.backgroundColor,
       body: Container(
         child: Column(
           children: [
+            SizedBox(height: 70.h),
             Container(
-              height: 260.h,
+              height: 290.h,
               width: 350.w,
-              padding: EdgeInsets.symmetric(horizontal: 20.w),
+              padding: EdgeInsets.symmetric(horizontal: 10.w),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Switcher(),
+                  SizedBox(height: 20.h),
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.bottomRight,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Text(
+                            "262,262 + 265",
+                            style: theme.textTheme.headline1,
+                          ),
+                          SizedBox(height: 10.h),
+                          Text(
+                            "262,527",
+                            style: theme.textTheme.headline2,
+                          ),
+                          SizedBox(height: 20.h),
+                        ],
+                      ),
+                    ),
+                  )
+                ],
+              ),
             ),
             Expanded(
               child: Container(

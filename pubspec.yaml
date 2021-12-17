@@ -32,6 +32,7 @@ dependencies:
   flutter_icons:
   flutter_phoenix: ^1.0.0
   get:
+  google_fonts:
 
 dev_dependencies:
   flutter_test:
