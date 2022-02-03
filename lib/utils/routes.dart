@@ -1,4 +1,3 @@
-import 'package:calculator_app/main.dart';
 import 'package:calculator_app/modules/history/history.dart';
 import 'package:calculator_app/modules/home/home.dart';
 import 'package:calculator_app/modules/setting/setting.dart';

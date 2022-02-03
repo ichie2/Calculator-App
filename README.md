@@ -1,40 +1,78 @@
-Calculator App built with Flutter 
+# Voice Calculator App 👋
 
-My little presentation of my Calculator application built with FLUTTER/DART of an Inspiration i found on Dribbble
-<br>
+![Version](https://img.shields.io/badge/version-2.0.0-blue.svg?cacheSeconds=2592000)
+[![License: APACHE](https://img.shields.io/badge/License-APACHE-yellow.svg)](#)
 
-## 💻 Requirements
+ ![Logo](images/todey.png)
+
+
+
+A Voice Calculator App built with Flutter
+
+# Flutter Version
+Flutter 1.22.4
+
+
+
+# 💻 Requirements
 
 - Any Operating System (ie. MacOS X, Linux, Windows)
 - Any IDE with Flutter SDK installed (ie. IntelliJ, Android Studio, VSCode etc)
 - A little knowledge of Dart and Flutter
 
-
-## ✨ Features
-- [x] Responsive UI
-- [x] Home Page
-- [x] History Page 
-- [x] Setting Page
-- [x] Nice Icons (Flutter Icons) 👍
-- [x] Voice Command
-- [x] Light and Dark theme
+# Screenshots
 
 
+ ![Splash](ss/ss1.png)
+ ![Home Screen Landscape](ss/ss2.png)
+ ![Home Screen Potrait](screenshots/ss3.png)
+ ![History](ss/ss4.png)
+ ![Setting](ss/ss5.png)
 
-<img src="ss/ss1.png" width="400">
-<img src="ss/ss2.png" width="400">
-<img src="ss/ss2.png" width="400">
-<img src="ss/ss2.png" width="400">
-<img src="ss/ss2.png" width="400">
-<img src="ss/ss2.png" width="400">
+# Command
+### Install dependencies
 
-## 🎞 Demo 
+```sh
+flutter pub get
+```
+
+### Run application
+
+```sh
+flutter emulators --launch <emulator_name>
+flutter run
+```
+
+### Build
+
+```sh
+flutter build apk
+```
+
+# Plugins
+
+- [google_font](https://pub.dev/packages/google_font) 
+- [flutter_bloc](https://pub.dev/packages/flutter_bloc) 
+- [flutter_icons:](https://pub.dev/packages/flutter_icons) 
+- [sqflite](https://pub.dev/packages/sqflite) 
+- [path_provider](https://pub.dev/packages/path_provider) 
+- [shared_preferences](https://pub.dev/packages/shared_preferences)  
+- [flutter_screenutil](https://pub.dev/packages/flutter_screenutil) 
+- [url_launcher](https://pub.dev/packages/url_launcher) 
+
+# Coming Soon
 
 
-## 🤓 Author(s)
+## Author
 
-**Flutter BoyFriend**
-<<<<<<< HEAD
+👤 **Flutter BoyFriend**
 
-## 🤝 Contribution (s)
+* Github: [@FlutterBoyfriend](https://github.com/FlutterBoyfriend)
+
+## Show your support
+Please Give a star all contributions are welcomed 
+
+
+
+
 

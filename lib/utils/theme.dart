@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/size_extension.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CustomTheme {
-  final _primaryColor = Color(0xfff4ab41);
+  static Color _primaryColor = Color(0xfff4ab41);
 
   //
   static TextTheme _lightTextTheme = TextTheme(
@@ -18,8 +18,13 @@ class CustomTheme {
       fontWeight: FontWeight.w200,
       color: Colors.black54,
     ),
+    bodyText2: GoogleFonts.mulish(
+      fontSize: 20.sp,
+      fontWeight: FontWeight.w500,
+      color: Colors.black,
+    ),
   );
-  static TextTheme _darkTextTheme = TextTheme();
+  static const TextTheme _darkTextTheme = TextTheme();
 
   static ThemeData lightTheme() {
     return ThemeData(
@@ -31,7 +36,7 @@ class CustomTheme {
       backgroundColor: Colors.white,
       scaffoldBackgroundColor: Colors.white,
       accentColor: Colors.grey,
-      primaryColor: Colors.blue,
+      primaryColor: _primaryColor,
     );
   }
 
