@@ -21,12 +21,13 @@ class _SwitcherState extends State<Switcher> {
         });
       },
       child: Container(
-        height: 75.h,
-        width: 40.w,
+        height: 75,
+        width: 40,
         padding: EdgeInsets.symmetric(vertical: 5.h),
         decoration: BoxDecoration(
+          // ignore: deprecated_member_use
           color: theme.accentColor.withOpacity(0.1),
-          borderRadius: BorderRadius.circular(20.sp),
+          borderRadius: BorderRadius.circular(20),
         ),
         child: AnimatedAlign(
           alignment: _isDark ? Alignment.bottomCenter : Alignment.topCenter,
@@ -35,8 +36,8 @@ class _SwitcherState extends State<Switcher> {
           child: AnimatedContainer(
             duration: const Duration(milliseconds: 300),
             curve: Curves.bounceInOut,
-            height: 30.h,
-            width: 30.w,
+            height: 30,
+            width: 30,
             decoration: BoxDecoration(
               color: _isDark ? Colors.blueGrey : theme.primaryColor,
               shape: BoxShape.circle,
@@ -44,7 +45,7 @@ class _SwitcherState extends State<Switcher> {
             alignment: Alignment.center,
             child: Icon(
               _isDark ? Icons.dark_mode_sharp : Icons.light_mode_sharp,
-              size: 18.sp,
+              size: 18,
             ),
           ),
         ),

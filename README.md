@@ -3,7 +3,7 @@
 ![Version](https://img.shields.io/badge/version-2.0.0-blue.svg?cacheSeconds=2592000)
 [![License: APACHE](https://img.shields.io/badge/License-APACHE-yellow.svg)](#)
 
- ![Logo](images/todey.png)
+ <!-- ![Logo](images/todey.png) -->
 
 
 
@@ -23,8 +23,8 @@ Flutter 1.22.4
 # Screenshots
 
 
- ![Splash](ss/ss1.png)
- ![Home Screen Landscape](ss/ss2.png)
+ ![Potrait](ss/ss1.png)
+ ![Landscape](ss/ss2.png)
  ![Home Screen Potrait](screenshots/ss3.png)
  ![History](ss/ss4.png)
  ![Setting](ss/ss5.png)
@@ -53,7 +53,7 @@ flutter build apk
 
 - [google_font](https://pub.dev/packages/google_font) 
 - [flutter_bloc](https://pub.dev/packages/flutter_bloc) 
-- [flutter_icons:](https://pub.dev/packages/flutter_icons) 
+- [flutter_icons](https://pub.dev/packages/flutter_icons) 
 - [sqflite](https://pub.dev/packages/sqflite) 
 - [path_provider](https://pub.dev/packages/path_provider) 
 - [shared_preferences](https://pub.dev/packages/shared_preferences)  
@@ -61,6 +61,7 @@ flutter build apk
 - [url_launcher](https://pub.dev/packages/url_launcher) 
 
 # Coming Soon
+
 
 
 ## Author

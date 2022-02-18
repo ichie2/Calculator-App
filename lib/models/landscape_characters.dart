@@ -1,27 +1,25 @@
-List<String> characters = [
-  "C",
-  "÷",
-  "×",
-  "Del",
+// landscape numbers
+List<String> landscapeNum = [
   "7",
   "8",
   "9",
-  "-",
+  "÷",
   "4",
   "5",
   "6",
-  "+",
+  "X",
   "1",
   "2",
   "3",
-  "%",
+  "-",
+  ".",
   "0",
   "00",
-  ".",
-  "="
+  "+"
 ];
 
-List<String> moreCharacters = [
+// when flick to landscape we get more maths operators
+List<String> landcapeEqn = [
   "INV",
   "RAD",
   "%",

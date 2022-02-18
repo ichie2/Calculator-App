@@ -29,10 +29,23 @@ class ButtonWidget extends StatelessWidget {
           ),
           child: Text(
             character,
-            style: theme.textTheme.bodyText2,
+            style: theme.textTheme.bodyText2.copyWith(
+              fontSize: 18,
+            ),
           ),
         ),
       ),
     );
   }
+}
+
+Container indicatorWidget(ThemeData theme) {
+  return Container(
+    height: 6.h,
+    width: 50.w,
+    decoration: BoxDecoration(
+      color: theme.accentColor.withOpacity(0.5),
+      borderRadius: BorderRadius.circular(10.sp),
+    ),
+  );
 }
