@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/size_extension.dart';
+import 'package:calculator_app/utils/exports.dart';
 
 class Switcher extends StatefulWidget {
   const Switcher({Key key}) : super(key: key);

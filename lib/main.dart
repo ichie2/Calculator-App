@@ -1,8 +1,4 @@
-import 'package:calculator_app/modules/home/home.dart';
-import 'package:calculator_app/utils/theme.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:calculator_app/utils/exports.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

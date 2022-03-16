@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/size_extension.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:calculator_app/utils/exports.dart';
 
 class CustomTheme {
   static Color _primaryColor = Color(0xfff4ab41);

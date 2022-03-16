@@ -1,11 +1,8 @@
 import 'package:calculator_app/models/landscape_characters.dart';
-import 'package:calculator_app/models/potrait_characters.dart';
 import 'package:calculator_app/modules/home/potrait_view.dart';
-import 'package:calculator_app/widgets/button_widget.dart';
+import 'package:calculator_app/utils/exports.dart';
 import 'package:calculator_app/widgets/landcape_buttons.dart';
 import 'package:calculator_app/widgets/switch_widget.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/size_extension.dart';
 
 class Landscape extends StatefulWidget {
   const Landscape({Key key}) : super(key: key);

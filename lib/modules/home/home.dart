@@ -1,6 +1,4 @@
-import 'package:calculator_app/modules/home/landscape.dart';
-import 'package:calculator_app/modules/home/potrait_view.dart';
-import 'package:flutter/material.dart';
+import 'package:calculator_app/utils/exports.dart';
 
 class Home extends StatefulWidget {
   const Home({Key key}) : super(key: key);

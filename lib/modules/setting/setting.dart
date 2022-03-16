@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:calculator_app/utils/exports.dart';
 
 class Setting extends StatefulWidget {
   const Setting({Key key}) : super(key: key);

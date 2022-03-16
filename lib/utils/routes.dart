@@ -1,8 +1,4 @@
-import 'package:calculator_app/modules/history/history.dart';
-import 'package:calculator_app/modules/home/home.dart';
-import 'package:calculator_app/modules/setting/setting.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:calculator_app/utils/exports.dart';
 
 class RoutGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
