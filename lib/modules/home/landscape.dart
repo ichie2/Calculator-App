@@ -1,7 +1,7 @@
 import 'package:calculator_app/models/landscape_characters.dart';
 import 'package:calculator_app/modules/home/potrait_view.dart';
 import 'package:calculator_app/utils/exports.dart';
-import 'package:calculator_app/widgets/landcape_buttons.dart';
+import 'package:calculator_app/widgets/landscape_widgets/landcape_buttons.dart';
 import 'package:calculator_app/widgets/switch_widget.dart';
 
 class Landscape extends StatefulWidget {

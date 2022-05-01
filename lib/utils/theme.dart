@@ -1,3 +1,4 @@
+import 'package:calculator_app/constants/color_constants.dart';
 import 'package:calculator_app/utils/exports.dart';
 
 class CustomTheme {
@@ -9,17 +10,17 @@ class CustomTheme {
       fontSize: 45.sp,
       fontWeight: FontWeight.w400,
       height: 2.sp,
-      color: Colors.black,
+      color: blackTextColor,
     ),
     headline2: GoogleFonts.mulish(
       fontSize: 28.sp,
       fontWeight: FontWeight.w200,
-      color: Colors.black54,
+      color: blackTextColor,
     ),
     bodyText2: GoogleFonts.mulish(
       fontSize: 20.sp,
       fontWeight: FontWeight.w500,
-      color: Colors.black,
+      color: blackTextColor,
     ),
   );
   static const TextTheme _darkTextTheme = TextTheme();
@@ -33,7 +34,7 @@ class CustomTheme {
       primaryColorBrightness: Brightness.light,
       backgroundColor: Colors.white,
       scaffoldBackgroundColor: Colors.white,
-      accentColor: Colors.grey,
+      accentColor: greyTextColor,
       primaryColor: _primaryColor,
     );
   }

@@ -24,11 +24,13 @@ dependencies:
   cupertino_icons: ^1.0.0
   flutter:
     sdk: flutter
-  flutter_bloc: ^8.0.1
-  flutter_icons: null
-  flutter_screenutil: null
-  google_fonts: null
-  internet_checker: ^1.0.0
+  flutter_bloc: 
+  flutter_icons:
+  flutter_screenutil: 
+  google_fonts: 
+  internet_checker: 
+  # speech_to_text:
+  
 
 dev_dependencies:
   flutter_test:
@@ -45,7 +47,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/
+     - assets/images/
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

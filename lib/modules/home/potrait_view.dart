@@ -1,4 +1,5 @@
 import 'package:calculator_app/utils/exports.dart';
+import 'package:calculator_app/widgets/potrait_widgets/indicator_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/size_extension.dart';
 
@@ -68,7 +69,7 @@ class _PotraitState extends State<Potrait> {
                         color: theme.accentColor.withOpacity(0.05),
                         child: Column(children: [
                           SizedBox(height: 10.h),
-                          indicatorWidget(theme),
+                          indicator(),
                           Container(
                             child: Flexible(
                               child: MediaQuery.removePadding(

@@ -1,3 +1,4 @@
+import 'package:calculator_app/constants/color_constants.dart';
 import 'package:calculator_app/utils/exports.dart';
 
 class Switcher extends StatefulWidget {
@@ -38,7 +39,7 @@ class _SwitcherState extends State<Switcher> {
             height: 30,
             width: 30,
             decoration: BoxDecoration(
-              color: _isDark ? Colors.blueGrey : theme.primaryColor,
+              color: _isDark ? blueGreyColor : primaryColor,
               shape: BoxShape.circle,
             ),
             alignment: Alignment.center,
