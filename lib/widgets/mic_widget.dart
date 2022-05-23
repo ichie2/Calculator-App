@@ -1,3 +1,4 @@
+import 'package:calculator_app/constants/color_constants.dart';
 import 'package:calculator_app/utils/exports.dart';
 
 class MicWidget extends StatefulWidget {
@@ -13,7 +14,9 @@ class _MicWidgetState extends State<MicWidget> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          shape: BoxShape.circle, border: Border.all(color: Colors.white)),
+        shape: BoxShape.circle,
+        border: Border.all(color: whiteColor),
+      ),
       child: FloatingActionButton(
         onPressed: () {
           //
