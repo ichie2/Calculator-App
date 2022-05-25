@@ -1,4 +1,5 @@
 import 'package:calculator_app/utils/exports.dart';
+
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([
