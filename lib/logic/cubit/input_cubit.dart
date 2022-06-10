@@ -1,17 +1,21 @@
 import 'package:bloc/bloc.dart';
+import 'package:calculator_app/logic/cubit/answer_cubit.dart';
 import 'package:meta/meta.dart';
 
 part 'input_state.dart';
 
 class InputCubit extends Cubit<InputState> {
-  InputCubit() : super(InputState(input: "0"));
+  final AnswerCubit answerCubit;
+
+  InputCubit(this.answerCubit) : super(InputState(input: "0"));
 
   // if number is equal zero (state will still be 0)
-  void increment(input) {
+  void increment(String input) {
     final chars = state.input;
     if (chars == "0" && input == "0") {
       // emit(InputState(input: "0"));
     } else if (input == "C") {
+      answerCubit.clear();
       emit(InputState(input: "0"));
     } else if (input == "⌦" && chars.isNotEmpty) {
       final chars = state.input;
@@ -21,5 +25,9 @@ class InputCubit extends Cubit<InputState> {
     } else if (!chars.startsWith("0") && input != "⌦") {
       emit(InputState(input: chars + input));
     }
+  }
+
+  void evalute() {
+    answerCubit.evalute(state.input);
   }
 }

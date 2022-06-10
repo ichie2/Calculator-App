@@ -27,7 +27,7 @@ class ButtonWidget extends StatelessWidget {
           child: InkWell(
             onTap: () {
               //
-              con.increment(character);
+              character == "=" ? con.evalute() : con.increment(character);
             },
             borderRadius: BorderRadius.circular(10.sp),
             child: Padding(

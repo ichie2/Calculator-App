@@ -1,3 +1,4 @@
+import 'package:calculator_app/logic/cubit/answer_cubit.dart';
 import 'package:calculator_app/logic/cubit/input_cubit.dart';
 import 'package:calculator_app/utils/exports.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -17,27 +18,31 @@ class ResultWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            BlocConsumer<InputCubit, InputState>(
+            BlocBuilder<InputCubit, InputState>(
               builder: (context, state) {
-                return Text(
-                  state.input,
-                  style: textTheme.headline1.copyWith(
-                    fontSize: 32,
-                    fontWeight: FontWeight.w600,
+                return SingleChildScrollView(
+                  child: Text(
+                    state.input,
+                    style: textTheme.headline1.copyWith(
+                      fontSize: 32,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 );
               },
-              listener: (prev, cur) {},
             ),
-          
             SizedBox(height: 10.h),
-            Text(
-              "262,527",
-              style: textTheme.headline2.copyWith(
-                fontSize: 25,
-                fontWeight: FontWeight.w400,
-              ),
-            ),
+            BlocBuilder<AnswerCubit, AnswerState>(builder: (context, state) {
+              return SingleChildScrollView(
+                child: Text(
+                  state.answer.toString(),
+                  style: textTheme.headline2.copyWith(
+                    fontSize: 25,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+              );
+            }),
             SizedBox(height: 20.h),
           ],
         ),

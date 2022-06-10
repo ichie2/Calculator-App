@@ -1,3 +1,4 @@
+import 'package:calculator_app/logic/cubit/answer_cubit.dart';
 import 'package:calculator_app/logic/cubit/input_cubit.dart';
 import 'package:calculator_app/utils/exports.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -25,23 +26,26 @@ class MyApp extends StatelessWidget {
         systemNavigationBarDividerColor: Colors.transparent,
       ),
     );
-    return ScreenUtilInit(
-      designSize: Size(375, 825),
-      builder: () {
-        return MultiBlocProvider(
-          providers: [
-            BlocProvider<InputCubit>(create: (context) => InputCubit()),
-          ],
-          child: MaterialApp(
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider<AnswerCubit>(create: (context) => AnswerCubit()),
+        BlocProvider<InputCubit>(
+          create: (context) => InputCubit(context.read<AnswerCubit>()),
+        ),
+      ],
+      child: ScreenUtilInit(
+        designSize: Size(375, 825),
+        builder: () {
+          return MaterialApp(
             color: Colors.white,
             debugShowCheckedModeBanner: false,
             title: 'Calculator Pro',
             theme: CustomTheme.lightTheme(),
             darkTheme: CustomTheme.darkTheme(),
             home: Home(),
-          ),
-        );
-      },
+          );
+        },
+      ),
     );
   }
 }
