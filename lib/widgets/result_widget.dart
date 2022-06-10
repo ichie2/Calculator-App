@@ -1,4 +1,6 @@
+import 'package:calculator_app/logic/cubit/input_cubit.dart';
 import 'package:calculator_app/utils/exports.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ResultWidget extends StatelessWidget {
   const ResultWidget({
@@ -15,13 +17,19 @@ class ResultWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Text(
-              "262,262 + 265",
-              style: textTheme.headline1.copyWith(
-                fontSize: 32,
-                fontWeight: FontWeight.w600,
-              ),
+            BlocConsumer<InputCubit, InputState>(
+              builder: (context, state) {
+                return Text(
+                  state.input,
+                  style: textTheme.headline1.copyWith(
+                    fontSize: 32,
+                    fontWeight: FontWeight.w600,
+                  ),
+                );
+              },
+              listener: (prev, cur) {},
             ),
+          
             SizedBox(height: 10.h),
             Text(
               "262,527",

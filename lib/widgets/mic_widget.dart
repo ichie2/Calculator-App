@@ -69,17 +69,12 @@ class _MicWidgetState extends State<MicWidget> {
     final double endX = context.size.width - _widgetSize.width;
     final double startY = MediaQuery.of(context).padding.top;
     final double endY = context.size.height - _widgetSize.height;
-    print("draggin bool 1 postion : ${startX < _offset.dx}");
-    print("draggin bool 1 : ${_offset.dx < endX}");
-    print("draggin bool 2 postion : ${startY < _offset.dy}");
-    print("draggin bool 2 : ${_offset.dy < endY}");
 
     // make sure widget is not off screen area
     if (startX < _offset.dx && _offset.dx < endX) {
       if (startY < _offset.dy && _offset.dy < endY) {
         _floatLocation = Offset(_offset.dx, _offset.dy);
         setState(() {});
-        // print(_floatLocation);
       }
     }
   }
