@@ -13,12 +13,12 @@ class InputCubit extends Cubit<InputState> {
       // emit(InputState(input: "0"));
     } else if (input == "C") {
       emit(InputState(input: "0"));
-    } else if (input == "Del" && chars.isNotEmpty) {
+    } else if (input == "⌦" && chars.isNotEmpty) {
       final chars = state.input;
       emit(InputState(input: state.input.substring(0, chars.length - 1)));
-    } else if (chars.startsWith("0") && input != "Del") {
+    } else if (chars.startsWith("0") && input != "⌦") {
       emit(InputState(input: input));
-    } else if (!chars.startsWith("0") && input != "Del") {
+    } else if (!chars.startsWith("0") && input != "⌦") {
       emit(InputState(input: chars + input));
     }
   }

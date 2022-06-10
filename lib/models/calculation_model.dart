@@ -3,7 +3,11 @@ class InputModel {
   String result;
   String date;
 
-  InputModel({this.input, this.result, this.date});
+  InputModel({
+    this.input,
+    this.result,
+    this.date,
+  });
 
 //
   Map<String, dynamic> toJson() => {

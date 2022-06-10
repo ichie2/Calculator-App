@@ -1,6 +1,8 @@
 // landcape number pads
 import 'package:calculator_app/constants/color_constants.dart';
+import 'package:calculator_app/logic/cubit/input_cubit.dart';
 import 'package:calculator_app/utils/exports.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class PrimaryLandscapeButton extends StatelessWidget {
   final String character;
@@ -12,6 +14,7 @@ class PrimaryLandscapeButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final con = context.read<InputCubit>();
     final theme = Theme.of(context);
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 7.w),
@@ -25,6 +28,7 @@ class PrimaryLandscapeButton extends StatelessWidget {
           child: InkWell(
             onTap: () {
               //
+              con.increment(character);
             },
             borderRadius: BorderRadius.circular(20.sp),
             child: Padding(
@@ -33,9 +37,8 @@ class PrimaryLandscapeButton extends StatelessWidget {
                 child: Text(
                   character,
                   style: theme.textTheme.bodyText2.copyWith(
-                    fontSize: 18,
+                    fontSize: 20,
                     fontWeight: FontWeight.w600,
-                    // ignore: deprecated_member_use
                     color:
                         character == "=" ? theme.backgroundColor : Colors.black,
                   ),
@@ -56,6 +59,7 @@ class LandscapeButton extends StatelessWidget {
   const LandscapeButton({Key key, this.character}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    final con = context.read<InputCubit>();
     final theme = Theme.of(context);
     return Container(
       child: Material(
@@ -63,6 +67,7 @@ class LandscapeButton extends StatelessWidget {
         child: InkWell(
           onTap: () {
             //
+            con.increment(character);
           },
           borderRadius: BorderRadius.circular(20.sp),
           child: Padding(

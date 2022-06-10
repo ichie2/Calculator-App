@@ -1,4 +1,4 @@
-import 'package:calculator_app/models/landscape_characters.dart';
+import 'package:calculator_app/constants/character_constants.dart';
 import 'package:calculator_app/utils/exports.dart';
 import 'package:calculator_app/widgets/landscape_widgets/landcape_buttons.dart';
 import 'package:calculator_app/widgets/result_widget.dart';

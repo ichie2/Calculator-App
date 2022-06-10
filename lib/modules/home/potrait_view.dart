@@ -1,6 +1,7 @@
+import 'package:calculator_app/constants/character_constants.dart';
 import 'package:calculator_app/constants/color_constants.dart';
 import 'package:calculator_app/utils/exports.dart';
-import 'package:calculator_app/widgets/mic_widget.dart';
+
 import 'package:calculator_app/widgets/potrait_widgets/indicator_widget.dart';
 import 'package:calculator_app/widgets/result_widget.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +15,25 @@ class Potrait extends StatefulWidget {
 }
 
 class _PotraitState extends State<Potrait> {
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      getFloatingBox();
+    });
+  }
+
+  // Global Key
+  final GlobalKey _floatingKey = GlobalKey();
+
+  //
+  Size _widgetSize;
+  Offset _floatLocation = Offset(0, 140);
+
+  void getFloatingBox() {
+    RenderBox renderbox = _floatingKey.currentContext.findRenderObject();
+    _widgetSize = renderbox.size;
+  }
+
   double _percentage = 0;
 
   @override
@@ -50,8 +70,8 @@ class _PotraitState extends State<Potrait> {
                       return true;
                     },
                     child: DraggableScrollableSheet(
-                      maxChildSize: 1.0,
-                      initialChildSize: 1.0,
+                      maxChildSize: 0.97,
+                      initialChildSize: 0.97,
                       minChildSize: 0.0,
                       builder: (BuildContext context,
                           ScrollController scrollController) {
@@ -96,7 +116,54 @@ class _PotraitState extends State<Potrait> {
           ],
         ),
       ),
-      floatingActionButton: MicWidget(),
+      floatingActionButton: GestureDetector(
+        key: _floatingKey,
+        child: Stack(children: [
+          AnimatedPositioned(
+            left: _floatLocation.dx,
+            right: _floatLocation.dy,
+            duration: const Duration(milliseconds: 300),
+            child: FloatingActionButton(
+              onPressed: () {
+                // use mic
+              },
+            ),
+          ),
+        ]),
+        onVerticalDragUpdate: (details) => onDragUpdate(context, details),
+        onHorizontalDragUpdate: (details) => onDragUpdate(context, details),
+        onVerticalDragEnd: (details) => onDragEnd(context, details),
+        onHorizontalDragEnd: (details) => onDragEnd(context, details),
+      ),
     );
+  }
+
+  void onDragEnd(BuildContext context, DragEndDetails details) {
+    final double pointX = context.size.width / 2;
+    if (_floatLocation.dx > pointX) {
+      _floatLocation = Offset(0, _floatLocation.dy);
+    } else {
+      _floatLocation = Offset(context.size.width - 50, _floatLocation.dy);
+    }
+    setState(() {});
+  }
+
+  void onDragUpdate(BuildContext context, DragUpdateDetails details) {
+    final RenderBox _box = context.findRenderObject();
+    final Offset _offset = _box.globalToLocal(details.globalPosition);
+
+    //screen view
+    final double startX = 0;
+    final double endX = context.size.width - _widgetSize.width;
+    final double startY = MediaQuery.of(context).padding.top;
+    final double endY = context.size.height - _widgetSize.height;
+
+    // make sure widget is not off screen area
+    if (startX < _offset.dx && _offset.dx < endX) {
+      if (startY < _offset.dy && _offset.dy < endY) {
+        _floatLocation = Offset(_offset.dx, _offset.dy);
+        setState(() {});
+      }
+    }
   }
 }

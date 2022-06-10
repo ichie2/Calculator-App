@@ -28,7 +28,8 @@ dependencies:
   flutter_icons:
   flutter_screenutil:
   google_fonts:
-  internet_checker:
+  connectivity_plus:
+  math_expressions:
 
 dev_dependencies:
   flutter_test:

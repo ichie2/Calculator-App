@@ -37,7 +37,8 @@ class ButtonWidget extends StatelessWidget {
               child: Text(
                 character,
                 style: textTheme.bodyText2.copyWith(
-                  fontSize: 18.sp,
+                  fontSize: 20.sp,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
             ),
