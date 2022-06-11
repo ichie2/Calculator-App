@@ -1,5 +1,5 @@
 import 'package:calculator_app/presentation/screens/landscape.dart';
-import 'package:calculator_app/presentation/screens/potrait_view.dart';
+import 'package:calculator_app/presentation/screens/potrait.dart';
 import 'package:calculator_app/core/exports.dart';
 
 class Home extends StatefulWidget {

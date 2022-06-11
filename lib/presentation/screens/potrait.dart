@@ -1,7 +1,6 @@
 import 'package:calculator_app/constants/character_constants.dart';
 import 'package:calculator_app/constants/color_constants.dart';
 import 'package:calculator_app/core/exports.dart';
-
 import 'package:calculator_app/presentation/widgets/indicator_widget.dart';
 import 'package:calculator_app/presentation/widgets/result_widget.dart';
 import 'package:flutter/material.dart';
@@ -45,9 +44,8 @@ class _PotraitState extends State<Potrait> {
         bottom: false,
         child: Column(
           children: [
-            SizedBox(height: 20.h),
             Container(
-              height: 290.h,
+              height: 300.h,
               width: 350.w,
               padding: EdgeInsets.symmetric(horizontal: 10.w),
               child: Column(
@@ -64,51 +62,39 @@ class _PotraitState extends State<Potrait> {
                 child: Material(
                   elevation: 1,
                   color: theme.backgroundColor,
-                  child: NotificationListener<DraggableScrollableNotification>(
-                    onNotification: (val) {
-                      _percentage = 2 * val.extent;
-                      return true;
-                    },
-                    child: DraggableScrollableSheet(
-                      maxChildSize: 0.97,
-                      initialChildSize: 0.97,
-                      minChildSize: 0.0,
-                      builder: (BuildContext context,
-                          ScrollController scrollController) {
-                        return Container(
-                          padding: EdgeInsets.symmetric(horizontal: 20.w),
-                          color: greyTextColor.withOpacity(0.05),
+                  child: DraggableScrollableSheet(
+                    maxChildSize: 0.95,
+                    initialChildSize: 0.95,
+                    minChildSize: 0.5,
+                    builder: (BuildContext context,
+                        ScrollController scrollController) {
+                      return Container(
+                        padding: EdgeInsets.symmetric(horizontal: 20.w),
+                        color: greyTextColor.withOpacity(0.05),
+                        child: SingleChildScrollView(
+                          controller: scrollController,
                           child: Column(children: [
                             SizedBox(height: 10.h),
                             indicator(),
-                            Container(
-                              child: Flexible(
-                                child: MediaQuery.removePadding(
-                                  removeTop: true,
-                                  context: context,
-                                  child: GridView.builder(
-                                    physics: NeverScrollableScrollPhysics(),
-                                    itemCount: potraitNum.length,
-                                    gridDelegate:
-                                        SliverGridDelegateWithFixedCrossAxisCount(
-                                      crossAxisCount: 4,
-                                      crossAxisSpacing: 10.0,
-                                      mainAxisSpacing: 10.0,
-                                    ),
-                                    itemBuilder: (_, index) {
-                                      final snapshot = potraitNum[index];
-                                      return ButtonWidget(
-                                        character: snapshot,
-                                      );
-                                    },
-                                  ),
-                                ),
+                            GridView.builder(
+                              shrinkWrap: true,
+                              physics: NeverScrollableScrollPhysics(),
+                              itemCount: potraitNum.length,
+                              gridDelegate:
+                                  SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 4,
+                                crossAxisSpacing: 10.0,
+                                mainAxisSpacing: 10.0,
                               ),
+                              itemBuilder: (_, index) {
+                                final snapshot = potraitNum[index];
+                                return ButtonWidget(character: snapshot);
+                              },
                             )
                           ]),
-                        );
-                      },
-                    ),
+                        ),
+                      );
+                    },
                   ),
                 ),
               ),

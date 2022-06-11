@@ -43,7 +43,6 @@ class ResultWidget extends StatelessWidget {
                 ),
               );
             }),
-            SizedBox(height: 20.h),
           ],
         ),
       ),

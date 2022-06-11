@@ -25,11 +25,28 @@ class InputCubit extends Cubit<InputState> {
     } else if (!chars.startsWith("0") && input != "⌦") {
       emit(InputState(input: chars + input));
     }
-    answerCubit.evalute(state.input);
   }
 
   // Get expression and evaluate it
   void evalute() {
-    answerCubit.evalute(state.input);
+    final input = state.input;
+
+    bool containsChar = input.contains("÷") ||
+        input.contains("-") ||
+        input.contains("+") ||
+        input.contains("x") ||
+        input.contains("%");
+
+    bool doesntEndWithChars = !input.endsWith("÷") ||
+        !input.endsWith("-") ||
+        !input.endsWith("+") ||
+        !input.endsWith("x") ||
+        !input.endsWith("%");
+
+    if (containsChar && doesntEndWithChars) {
+      answerCubit.evalute(input);
+    } else {
+      // do nothing
+    }
   }
 }

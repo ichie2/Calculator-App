@@ -3,19 +3,19 @@ List<String> landscapeNum = [
   "7",
   "8",
   "9",
-  " ÷ ",
+  "÷",
   "4",
   "5",
   "6",
-  " x ",
+  "x",
   "1",
   "2",
   "3",
-  " - ",
+  "-",
   ".",
   "0",
   "00",
-  " + "
+  "+"
 ];
 
 // when flick to landscape we get more maths operators
