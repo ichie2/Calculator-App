@@ -1,4 +1,5 @@
-import 'package:calculator_app/utils/exports.dart';
+
+import 'package:calculator_app/core/exports.dart';
 
 class RoutGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {

@@ -1,9 +1,9 @@
 import 'package:calculator_app/constants/character_constants.dart';
 import 'package:calculator_app/constants/color_constants.dart';
-import 'package:calculator_app/utils/exports.dart';
+import 'package:calculator_app/core/exports.dart';
 
-import 'package:calculator_app/widgets/potrait_widgets/indicator_widget.dart';
-import 'package:calculator_app/widgets/result_widget.dart';
+import 'package:calculator_app/presentation/widgets/indicator_widget.dart';
+import 'package:calculator_app/presentation/widgets/result_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/size_extension.dart';
 

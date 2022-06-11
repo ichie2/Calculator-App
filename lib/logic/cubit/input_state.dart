@@ -5,10 +5,6 @@ part of 'input_cubit.dart';
 
 class InputState {
   String input;
-  bool includeChars;
 
-  InputState({
-    @required this.input,
-    this.includeChars,
-  });
+  InputState({@required this.input});
 }

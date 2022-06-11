@@ -1,7 +1,7 @@
 // landcape number pads
 import 'package:calculator_app/constants/color_constants.dart';
 import 'package:calculator_app/logic/cubit/input_cubit.dart';
-import 'package:calculator_app/utils/exports.dart';
+import 'package:calculator_app/core/exports.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class PrimaryLandscapeButton extends StatelessWidget {

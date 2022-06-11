@@ -1,5 +1,5 @@
 import 'package:calculator_app/constants/color_constants.dart';
-import 'package:calculator_app/utils/exports.dart';
+import 'package:calculator_app/core/exports.dart';
 
 class CustomTheme {
   static Color _primaryColor = Color(0xfff4ab41);

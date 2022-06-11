@@ -1,4 +1,4 @@
-import 'package:calculator_app/utils/exports.dart';
+import 'package:calculator_app/core/exports.dart';
 
 Color blackTextColor = Color(0xff000000);
 Color greyTextColor = Color(0xffC4C4C4);

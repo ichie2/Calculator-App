@@ -1,4 +1,4 @@
-import 'package:calculator_app/utils/exports.dart';
+import 'package:calculator_app/core/exports.dart';
 
 class Setting extends StatefulWidget {
   const Setting({Key key}) : super(key: key);

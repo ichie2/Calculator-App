@@ -1,6 +1,6 @@
 import 'package:calculator_app/logic/cubit/answer_cubit.dart';
 import 'package:calculator_app/logic/cubit/input_cubit.dart';
-import 'package:calculator_app/utils/exports.dart';
+import 'package:calculator_app/core/exports.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ResultWidget extends StatelessWidget {

@@ -1,8 +1,8 @@
 import 'package:calculator_app/constants/character_constants.dart';
-import 'package:calculator_app/utils/exports.dart';
-import 'package:calculator_app/widgets/landscape_widgets/landcape_buttons.dart';
-import 'package:calculator_app/widgets/result_widget.dart';
-import 'package:calculator_app/widgets/switch_widget.dart';
+import 'package:calculator_app/core/exports.dart';
+import 'package:calculator_app/presentation/widgets/landcape_buttons.dart';
+import 'package:calculator_app/presentation/widgets/result_widget.dart';
+import 'package:calculator_app/presentation/widgets/switch_widget.dart';
 
 class Landscape extends StatefulWidget {
   const Landscape({Key key}) : super(key: key);

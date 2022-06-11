@@ -25,8 +25,10 @@ class InputCubit extends Cubit<InputState> {
     } else if (!chars.startsWith("0") && input != "⌦") {
       emit(InputState(input: chars + input));
     }
+    answerCubit.evalute(state.input);
   }
 
+  // Get expression and evaluate it
   void evalute() {
     answerCubit.evalute(state.input);
   }
