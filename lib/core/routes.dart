@@ -1,4 +1,3 @@
-
 import 'package:calculator_app/core/exports.dart';
 
 class RoutGenerator {
