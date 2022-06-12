@@ -52,7 +52,7 @@ class _LandscapeState extends State<Landscape> {
                   width: 50.w,
                   child: Column(children: [
                     Expanded(
-                      child: PrimaryLandscapeButton(character: "DEL"),
+                      child: PrimaryLandscapeButton(character: "⌦"),
                     ),
                     Expanded(
                       child: PrimaryLandscapeButton(character: " = "),

@@ -8,3 +8,7 @@ Color whiteColor = Color(0xffffffff);
 Color primaryColor = Color(0xfff4ab41);
 Color transparentColor = Colors.transparent;
 Color blueGreyColor = Colors.blueGrey;
+
+// Activity Indicator
+Color active = Colors.green;
+Color disabled = Colors.redAccent;

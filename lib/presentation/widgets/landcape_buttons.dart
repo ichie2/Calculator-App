@@ -28,7 +28,7 @@ class PrimaryLandscapeButton extends StatelessWidget {
           child: InkWell(
             onTap: () {
               //
-              con.increment(character);
+              character == " = " ? con.evalute() : con.increment(character);
             },
             borderRadius: BorderRadius.circular(20.sp),
             child: Padding(
