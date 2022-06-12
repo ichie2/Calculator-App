@@ -1,13 +1,17 @@
 import 'package:bloc/bloc.dart';
 import 'package:calculator_app/logic/cubit/answer_cubit.dart';
 import 'package:meta/meta.dart';
-
+import 'package:speech_to_text/speech_to_text.dart' as stt;
 part 'input_state.dart';
 
 class InputCubit extends Cubit<InputState> {
   final AnswerCubit answerCubit;
 
-  InputCubit(this.answerCubit) : super(InputState(input: "0"));
+  stt.SpeechToText _speech;
+
+  InputCubit(this.answerCubit) : super(InputState(input: "0")) {
+    _speech = stt.SpeechToText();
+  }
 
   // if number is equal zero (state will still be 0)
   void increment(String input) {
@@ -48,5 +52,35 @@ class InputCubit extends Cubit<InputState> {
     } else {
       // do nothing
     }
+  }
+
+  void listen() async {
+    bool _isListening = false;
+    bool _availability;
+
+    if (!_isListening) {
+      _availability = await _speech.initialize(
+        onError: (err) {
+          print(err.errorMsg);
+        },
+        onStatus: (status) {
+          print(status);
+        },
+      );
+
+      if (_availability) {
+        _isListening = true;
+        _speech.listen(
+          onResult: (res) {
+            print("recognized ${res.recognizedWords}");
+            final result = res.recognizedWords;
+            emit(InputState(input: result));
+          },
+        );
+      } else {
+        _speech.stop();
+      }
+    }
+    print(_availability);
   }
 }

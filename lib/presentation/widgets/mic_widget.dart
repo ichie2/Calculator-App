@@ -1,6 +1,7 @@
 import 'package:calculator_app/constants/color_constants.dart';
 import 'package:calculator_app/constants/string_constants.dart';
 import 'package:calculator_app/core/exports.dart';
+import 'package:calculator_app/logic/cubit/input_cubit.dart';
 import 'package:calculator_app/logic/cubit/internet_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lottie/lottie.dart';
@@ -17,9 +18,12 @@ class DraggableMic extends StatefulWidget {
 }
 
 class _DraggableMicState extends State<DraggableMic> {
-  Offset position = Offset(20.0, 20.0);
+  // initial position
+  Offset position = Offset(20.0, 100.0);
+
   @override
   Widget build(BuildContext context) {
+    final con = context.read<InputCubit>();
     return BlocBuilder<InternetCubit, InternetState>(
       builder: (context, state) {
         return AnimatedPositioned(
@@ -29,9 +33,11 @@ class _DraggableMicState extends State<DraggableMic> {
           child: Draggable(
             feedback: Container(),
             child: FloatingActionButton(
+              tooltip: "Voice Assistance",
               backgroundColor: state is InternetConnected ? active : disabled,
               onPressed: () {
                 // active voice mode
+                con.listen();
               },
               child: Lottie.asset(
                 state is InternetConnected ? busy : idle,
