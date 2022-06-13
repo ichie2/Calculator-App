@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
         BlocProvider<AnswerCubit>(create: (context) => AnswerCubit()),
         BlocProvider<InputCubit>(
             create: (context) => InputCubit(context.read<AnswerCubit>())),
-        BlocProvider(create: (context) => InternetCubit(Connectivity()))
+        BlocProvider(create: (context) => InternetCubit(Connectivity())),
       ],
       child: ScreenUtilInit(
         designSize: Size(375, 825),
