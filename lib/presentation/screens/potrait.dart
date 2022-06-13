@@ -1,6 +1,7 @@
 import 'package:calculator_app/constants/character_constants.dart';
 import 'package:calculator_app/constants/color_constants.dart';
 import 'package:calculator_app/core/exports.dart';
+import 'package:calculator_app/core/routes.dart';
 import 'package:calculator_app/presentation/widgets/indicator_widget.dart';
 import 'package:calculator_app/presentation/widgets/mic_widget.dart';
 import 'package:calculator_app/presentation/widgets/result_widget.dart';
@@ -50,20 +51,24 @@ class _PotraitState extends State<Potrait> {
                             const Spacer(),
                             IconButton(
                               onPressed: () {
-                                // Rotate Screem
+                                // rotate screen
                               },
                               icon: Icon(
                                 Iconsax.math,
                                 color: primaryColor,
+                                size: 20.sp,
                               ),
                             ),
                             IconButton(
                               onPressed: () {
-                                // Rotate Screem
+                                // setting page
+                                Navigator.pushNamed(
+                                    context, RouteGenerator.setting);
                               },
                               icon: Icon(
                                 Iconsax.setting,
                                 color: primaryColor,
+                                size: 20.sp,
                               ),
                             ),
                           ],
