@@ -42,7 +42,33 @@ class _PotraitState extends State<Potrait> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Switcher(),
+                      Container(
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Switcher(),
+                            const Spacer(),
+                            IconButton(
+                              onPressed: () {
+                                // Rotate Screem
+                              },
+                              icon: Icon(
+                                Iconsax.math,
+                                color: primaryColor,
+                              ),
+                            ),
+                            IconButton(
+                              onPressed: () {
+                                // Rotate Screem
+                              },
+                              icon: Icon(
+                                Iconsax.setting,
+                                color: primaryColor,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                       SizedBox(height: 20.h),
                       ResultWidget(),
                     ],

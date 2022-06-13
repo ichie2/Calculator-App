@@ -32,7 +32,7 @@ dependencies:
   lottie: null
   math_expressions: null
   speech_to_text: ^2.3.0
-
+  iconsax:
 
 dev_dependencies:
   flutter_test:
