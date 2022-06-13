@@ -24,7 +24,13 @@ class _DraggableMicState extends State<DraggableMic> {
   @override
   Widget build(BuildContext context) {
     final con = context.read<InputCubit>();
-    return BlocBuilder<InternetCubit, InternetState>(
+    return BlocConsumer<InternetCubit, InternetState>(
+      listener: (_, state) {
+        if (state is InternetConnected) {
+          con.listen();
+        }
+        con.stop();
+      },
       builder: (context, state) {
         return AnimatedPositioned(
           duration: Duration(milliseconds: 100),
@@ -36,7 +42,7 @@ class _DraggableMicState extends State<DraggableMic> {
               tooltip: "Voice Assistance",
               backgroundColor: state is InternetConnected ? active : disabled,
               onPressed: () {
-                // active voice mode
+                // activate voice mode
                 con.listen();
               },
               child: Lottie.asset(
