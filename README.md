@@ -3,7 +3,7 @@
 ![Version](https://img.shields.io/badge/version-2.0.0-blue.svg?cacheSeconds=2592000)
 [![License: APACHE](https://img.shields.io/badge/License-APACHE-yellow.svg)](#)
 
- <!-- ![Logo](images/todey.png) -->
+![Logo](assets/images/logo.png)
 
 A Voice Calculator App built with Flutter
 
@@ -76,6 +76,7 @@ flutter build apk
 
 - BMI Calculator
 - Firebase ML Vision
+- Complex Math Expression
 - UI Updates
 
 ## Author
