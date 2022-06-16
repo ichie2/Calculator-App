@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:calculator_app/logic/cubit/answer_cubit.dart';
+import 'package:calculator_app/presentation/widgets/toast_widget.dart';
 import 'package:meta/meta.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 part 'input_state.dart';
@@ -61,10 +62,10 @@ class InputCubit extends Cubit<InputState> {
     if (!_isListening) {
       _availability = await _speech.initialize(
         onError: (err) {
-          print(err.errorMsg);
+          showToast(message: err.errorMsg);
         },
         onStatus: (status) {
-          print(status);
+          showToast(message: status);
         },
       );
 
@@ -82,5 +83,9 @@ class InputCubit extends Cubit<InputState> {
       }
     }
     print(_availability);
+  }
+
+  void stop() {
+    _speech.stop();
   }
 }

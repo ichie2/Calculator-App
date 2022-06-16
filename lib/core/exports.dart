@@ -12,3 +12,4 @@ export 'package:flutter/material.dart';
 export 'package:calculator_app/presentation/screens/history.dart';
 export 'package:calculator_app/presentation/screens/home.dart';
 export 'package:calculator_app/presentation/screens/setting.dart';
+export 'package:iconsax/iconsax.dart';

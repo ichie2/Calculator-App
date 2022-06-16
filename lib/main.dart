@@ -1,3 +1,4 @@
+import 'package:calculator_app/core/routes.dart';
 import 'package:calculator_app/logic/cubit/answer_cubit.dart';
 import 'package:calculator_app/logic/cubit/input_cubit.dart';
 import 'package:calculator_app/core/exports.dart';
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
         BlocProvider<AnswerCubit>(create: (context) => AnswerCubit()),
         BlocProvider<InputCubit>(
             create: (context) => InputCubit(context.read<AnswerCubit>())),
-        BlocProvider(create: (context) => InternetCubit(Connectivity()))
+        BlocProvider(create: (context) => InternetCubit(Connectivity())),
       ],
       child: ScreenUtilInit(
         designSize: Size(375, 825),
@@ -47,6 +48,8 @@ class MyApp extends StatelessWidget {
             theme: CustomTheme.lightTheme(),
             darkTheme: CustomTheme.darkTheme(),
             home: Home(),
+            initialRoute: RouteGenerator.home,
+            onGenerateRoute: RouteGenerator.generateRoute,
           );
         },
       ),

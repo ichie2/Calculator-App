@@ -1,19 +1,22 @@
 import 'package:calculator_app/core/exports.dart';
 
-class RoutGenerator {
+class RouteGenerator {
+  static const String home = '/home';
+  static const String history = '/history';
+  static const String setting = '/setting';
+
   static Route<dynamic> generateRoute(RouteSettings settings) {
-    final args = settings.arguments;
-    switch (args) {
-      case "/home":
+    final name = settings.name;
+    switch (name) {
+      case home:
         return MaterialPageRoute(builder: (_) => Home());
         break;
-      case "history":
+      case history:
         return MaterialPageRoute(builder: (_) => History());
         break;
-      case "setting":
+      case setting:
         return MaterialPageRoute(builder: (_) => Setting());
         break;
     }
-    return args;
   }
 }
