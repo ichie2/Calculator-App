@@ -6,8 +6,8 @@ class RouteGenerator {
   static const String setting = '/setting';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
-    final args = settings.arguments;
-    switch (args) {
+    final name = settings.name;
+    switch (name) {
       case home:
         return MaterialPageRoute(builder: (_) => Home());
         break;
@@ -18,6 +18,5 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => Setting());
         break;
     }
-    return args;
   }
 }

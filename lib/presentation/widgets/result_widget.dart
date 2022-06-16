@@ -21,6 +21,7 @@ class ResultWidget extends StatelessWidget {
             BlocBuilder<InputCubit, InputState>(
               builder: (context, state) {
                 return SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
                   child: Text(
                     state.input,
                     style: textTheme.headline1.copyWith(
@@ -34,6 +35,7 @@ class ResultWidget extends StatelessWidget {
             SizedBox(height: 10.h),
             BlocBuilder<AnswerCubit, AnswerState>(builder: (context, state) {
               return SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
                 child: Text(
                   state.answer.toString(),
                   style: textTheme.headline2.copyWith(
