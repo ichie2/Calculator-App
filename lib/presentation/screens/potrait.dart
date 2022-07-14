@@ -16,14 +16,8 @@ class Potrait extends StatefulWidget {
 }
 
 class _PotraitState extends State<Potrait> {
-  // Global Key
-  final GlobalKey _floatingKey = GlobalKey();
-
   //
-  Size _widgetSize;
-  Offset _floatLocation = Offset(0, 100);
-
-  double _percentage = 0;
+  final GlobalKey _floatingKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
@@ -52,6 +46,10 @@ class _PotraitState extends State<Potrait> {
                             IconButton(
                               onPressed: () {
                                 // rotate screen
+                                SystemChrome.setPreferredOrientations([
+                                  DeviceOrientation.landscapeLeft,
+                                  DeviceOrientation.landscapeRight,
+                                ]);
                               },
                               icon: Icon(
                                 Iconsax.math,
@@ -128,26 +126,5 @@ class _PotraitState extends State<Potrait> {
         ),
       ),
     );
-  }
-
-  void onDragEnd(BuildContext context, DragEndDetails details) {}
-
-  void onDragUpdate(BuildContext context, DragUpdateDetails details) {
-    final RenderBox renderBox = context.findRenderObject();
-    Offset offset = renderBox.globalToLocal(details.globalPosition);
-
-    // calculate screen percentage
-    final double startPointX = 0;
-    final double endPointX = context.size.width - _widgetSize.width;
-
-    final double startPointY = MediaQuery.of(context).padding.top;
-    final double endPointY = context.size.height - _widgetSize.height;
-
-    if (startPointX < offset.dx && offset.dx < endPointX) {
-      if (startPointY < offset.dy && offset.dy < endPointY) {
-        _floatLocation = Offset(offset.dx, offset.dy);
-        setState(() {});
-      }
-    }
   }
 }

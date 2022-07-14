@@ -55,7 +55,7 @@ class InputCubit extends Cubit<InputState> {
     }
   }
 
-  void listen() async {
+  void speak() async {
     bool _isListening = false;
     bool _availability;
 

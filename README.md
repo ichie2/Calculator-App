@@ -71,6 +71,7 @@ flutter build apk
 - Animated Draggable Voice Assitance
 - Basic Math Expression
 - Reacts to Internet Status
+- Home Widget (Quick Action)
 
 # Coming Soon
 

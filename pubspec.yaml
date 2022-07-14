@@ -29,10 +29,12 @@ dependencies:
   flutter_icons: null
   flutter_screenutil: null
   google_fonts: null
+  hydrated_bloc: ^6.1.0
+  iconsax: null
   lottie: null
   math_expressions: null
   speech_to_text: ^2.3.0
-  iconsax:
+  path_provider:
 
 dev_dependencies:
   flutter_test:

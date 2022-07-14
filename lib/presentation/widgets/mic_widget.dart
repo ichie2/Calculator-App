@@ -27,7 +27,7 @@ class _DraggableMicState extends State<DraggableMic> {
     return BlocConsumer<InternetCubit, InternetState>(
       listener: (_, state) {
         if (state is InternetConnected) {
-          con.listen();
+          con.speak();
         }
         con.stop();
       },
@@ -43,7 +43,7 @@ class _DraggableMicState extends State<DraggableMic> {
               backgroundColor: state is InternetConnected ? active : disabled,
               onPressed: () {
                 // activate voice mode
-                con.listen();
+                con.speak();
               },
               child: Lottie.asset(
                 state is InternetConnected ? busy : idle,

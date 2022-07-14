@@ -6,18 +6,18 @@ class CustomTheme {
 
   //
   static TextTheme _lightTextTheme = TextTheme(
-    headline1: GoogleFonts.mulish(
+    headline1: GoogleFonts.muli(
       fontSize: 45.sp,
       fontWeight: FontWeight.w400,
       height: 2.sp,
       color: blackTextColor,
     ),
-    headline2: GoogleFonts.mulish(
+    headline2: GoogleFonts.muli(
       fontSize: 28.sp,
       fontWeight: FontWeight.w200,
       color: blackTextColor,
     ),
-    bodyText2: GoogleFonts.mulish(
+    bodyText2: GoogleFonts.muli(
       fontSize: 20.sp,
       fontWeight: FontWeight.w500,
       color: blackTextColor,

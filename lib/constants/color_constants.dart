@@ -1,14 +1,16 @@
 import 'package:calculator_app/core/exports.dart';
 
-Color blackTextColor = Color(0xff000000);
-Color greyTextColor = Color(0xffC4C4C4);
+// app colors
+const Color whiteColor = Color(0xffffffff);
+const Color primaryColor = Color(0xfff4ab41);
+const Color transparentColor = Colors.transparent;
+const Color blueGreyColor = Colors.blueGrey;
+const Color blackIconColor = Colors.black;
 
-// Colors
-Color whiteColor = Color(0xffffffff);
-Color primaryColor = Color(0xfff4ab41);
-Color transparentColor = Colors.transparent;
-Color blueGreyColor = Colors.blueGrey;
+// text color
+const Color blackTextColor = Color(0xff000000);
+const Color greyTextColor = Color(0xffC4C4C4);
 
-// Activity Indicator
-Color active = Colors.green;
-Color disabled = Colors.redAccent;
+// indicator colors
+const Color active = Colors.green;
+const Color disabled = Colors.redAccent;
