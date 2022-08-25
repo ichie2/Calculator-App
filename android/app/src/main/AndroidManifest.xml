@@ -4,8 +4,8 @@
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
-        android:name="io.flutter.app.FlutterApplication"
-        android:label="Calculator Pro"
+        android:usesCleartextTraffic="true"
+        android:label="Mathentic"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

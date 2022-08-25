@@ -17,6 +17,8 @@ class RouteGenerator {
       case setting:
         return MaterialPageRoute(builder: (_) => Setting());
         break;
+      default:
+        return MaterialPageRoute(builder: (_) => Home());
     }
   }
 }

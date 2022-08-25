@@ -5,8 +5,6 @@ import 'package:calculator_app/core/routes.dart';
 import 'package:calculator_app/presentation/widgets/indicator_widget.dart';
 import 'package:calculator_app/presentation/widgets/mic_widget.dart';
 import 'package:calculator_app/presentation/widgets/result_widget.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/size_extension.dart';
 
 class Potrait extends StatefulWidget {
   const Potrait({Key key}) : super(key: key);

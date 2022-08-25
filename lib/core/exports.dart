@@ -4,7 +4,6 @@ export 'package:flutter/services.dart';
 export 'package:flutter_screenutil/flutter_screenutil.dart';
 export 'package:flutter/material.dart';
 export 'package:flutter/widgets.dart';
-export 'package:flutter_screenutil/size_extension.dart';
 export 'package:google_fonts/google_fonts.dart';
 export 'package:calculator_app/presentation/widgets/potrait_button.dart';
 export 'package:calculator_app/presentation/widgets/switch_widget.dart';

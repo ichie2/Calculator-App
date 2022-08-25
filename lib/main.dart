@@ -14,14 +14,14 @@ import 'package:path_provider/path_provider.dart' as path;
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Directory directory = await path.getApplicationDocumentsDirectory();
-  HydratedBloc.storage =
-      await HydratedStorage.build(storageDirectory: directory);
+  final storage = await HydratedStorage.build(storageDirectory: directory);
+
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.landscapeLeft,
     DeviceOrientation.landscapeRight
   ]);
-  runApp(MyApp());
+  HydratedBlocOverrides.runZoned(() => runApp(MyApp()), storage: storage);
 }
 
 class MyApp extends StatelessWidget {
@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
       ],
       child: ScreenUtilInit(
         designSize: Size(375, 825),
-        builder: () {
+        builder: (_, __) {
           return BlocBuilder<ThemeCubit, bool>(
             builder: (context, state) {
               return MaterialApp(

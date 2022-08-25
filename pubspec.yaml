@@ -21,20 +21,21 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
-  connectivity_plus: null
   cupertino_icons: ^1.0.0
   flutter:
     sdk: flutter
-  flutter_bloc: null
-  flutter_icons: null
+  connectivity_plus: ^2.3.6+1
+  flutter_icons: ^1.1.0
   flutter_screenutil: null
   google_fonts: null
-  hydrated_bloc: ^6.1.0
+  hydrated_bloc: ^8.1.0
   iconsax: null
-  lottie: null
+  lottie: ^1.4.2
   math_expressions: null
-  speech_to_text: ^2.3.0
+  speech_to_text: ^5.6.1
   path_provider:
+  flutter_bloc: ^8.1.1
+  
 
 dev_dependencies:
   flutter_test:
